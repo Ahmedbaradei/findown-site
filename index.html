@@ -175,7 +175,7 @@
   const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.rise').forEach(el=>io.observe(el));
   setTimeout(()=>document.querySelectorAll('.rise:not(.in)').forEach(e=>e.classList.add('in')),1500);
-  const ENDPOINT='https://formsubmit.co/ajax/ahmedbaradei5@gmail.com';
+  const ENDPOINT='https://formsubmit.co/ajax/findown.com@gmail.com';
   document.querySelectorAll('.js-cap').forEach(form=>{
     const msg=form.parentElement.querySelector('.js-msg');
     form.addEventListener('submit',async e=>{
