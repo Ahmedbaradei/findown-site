@@ -43,8 +43,12 @@
   .rise.in{opacity:1;transform:none}
 
   /* ---- NAV ---- */
-  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:center;gap:26px;padding:20px 24px;transition:background .35s,border-color .35s}
-  nav.scrolled{background:rgba(9,7,11,.6);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);border-bottom:1px solid rgba(255,255,255,.08)}
+  nav{position:fixed;top:24px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;justify-content:center;gap:26px;
+    width:min(706px,calc(100% - 48px));height:40px;border-radius:999px;border:1px solid transparent;
+    transition:background .35s,border-color .35s,box-shadow .35s}
+  nav.scrolled{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.13);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);
+    box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
   nav a{color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-decoration:none;opacity:.92}
   nav a:hover{color:var(--red-bright);opacity:1}
 
@@ -61,13 +65,13 @@
   h1.hl .grad{background:linear-gradient(115deg,#FF6B78,var(--red) 40%,#FF2E43 60%,#ffb3ba 78%,#FF6B78);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradmove 6s ease-in-out infinite}
   @keyframes gradmove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
   .sub{width:604px;max-width:100%;margin-top:22px;font-size:18px;line-height:28px;color:var(--mut)}
-  form.cap{display:flex;align-items:center;gap:8px;width:452px;max-width:100%;height:58px;margin-top:22px;padding:7px 8px;border-radius:16px;
+  form.cap{display:flex;align-items:center;gap:8px;width:452px;max-width:100%;height:58px;margin-top:22px;padding:7px 8px;border-radius:999px;
     background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
     -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
-  form.cap input{flex:1;min-width:0;background:transparent;border:0;outline:none;color:#fff;font:inherit;font-size:15px;padding:0 10px;height:44px}
+  form.cap input{flex:1;min-width:0;background:transparent;border:0;outline:none;color:#fff;font:inherit;font-size:15px;padding:0 16px;height:44px}
   form.cap input::placeholder{color:rgba(255,255,255,.85)}
   form.cap button{border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;color:#fff;
-    width:140px;height:44px;border-radius:12px;background:linear-gradient(120deg,var(--red-bright),var(--red));
+    width:140px;height:44px;border-radius:999px;background:linear-gradient(120deg,var(--red-bright),var(--red));
     box-shadow:0 10px 24px -8px rgba(229,50,47,.6);transition:transform .18s,box-shadow .18s;white-space:nowrap}
   form.cap button:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(229,50,47,.7)}
   form.cap button:active{transform:none}
